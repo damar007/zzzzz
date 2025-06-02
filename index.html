@@ -1,0 +1,65 @@
+import { Mail, Linkedin, Github, Code2, BookOpen } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-800 font-sans p-6">
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <header className="flex flex-col items-center gap-4 text-center mb-12">
+          <img src="/profile.jpg" alt="Foto Profil" className="w-32 h-32 rounded-full shadow-lg" />
+          <h1 className="text-3xl font-bold">Grace Meicilia Sinaga</h1>
+          <p className="text-gray-600">Siswi SMAN 1 Pasuruan | Anggota OSIS | Ceria & Bersahabat</p>
+        </header>
+
+        {/* Section: Projects */}
+        <section className="mb-12">
+          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <Code2 className="animate-bounce text-indigo-500" /> Proyek & Karya
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Card>
+              <CardContent className="p-4">
+                <h3 className="text-lg font-bold">Website OSIS SMAN 1</h3>
+                <p className="text-sm text-gray-600">Situs resmi untuk informasi kegiatan OSIS.</p>
+                <p className="text-xs text-gray-500 mt-2">HTML, Tailwind CSS, JavaScript</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-4">
+                <h3 className="text-lg font-bold">Blog Cerita Remaja</h3>
+                <p className="text-sm text-gray-600">Tempat berbagi cerita dan pengalaman.</p>
+                <p className="text-xs text-gray-500 mt-2">WordPress, Canva</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Section: Skills */}
+        <section className="mb-12">
+          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <BookOpen className="animate-spin text-pink-500" /> Keahlian
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700">
+            <li>Desain Konten (Canva, Figma)</li>
+            <li>Komunikasi & Public Speaking</li>
+            <li>Menulis Artikel & Cerita</li>
+            <li>Organisasi & Kepemimpinan</li>
+          </ul>
+        </section>
+
+        {/* Section: Contact */}
+        <section>
+          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <Mail className="animate-ping text-emerald-500" /> Kontak
+          </h2>
+          <div className="space-y-2 text-sm">
+            <p className="flex items-center gap-2"><Mail className="w-4 h-4" /> grace.sinaga@email.com</p>
+            <p className="flex items-center gap-2"><Linkedin className="w-4 h-4" /> linkedin.com/in/gracemeicilia</p>
+            <p className="flex items-center gap-2"><Github className="w-4 h-4" /> github.com/gracemsinaga</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
